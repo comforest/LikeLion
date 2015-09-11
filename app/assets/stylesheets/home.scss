@@ -1,5 +1,3 @@
-
-
 .age-nav{
   position: fixed;
   right: 30px;
@@ -79,7 +77,7 @@ Main components
   //box-shadow: 0 0 0 4px black, inset 0 2px 0 rgba(0, 0, 0, 0.08), 0 3px 0 4px rgba(0, 0, 0, 0.05);
   z-index: 10;
   margin-left: 13px;
-  margin-top: 0px;
+  margin-top: 0;
 }
 .cd-timeline-img img {
   display: block;
@@ -97,7 +95,7 @@ Main components
     height: 14px;
     left: 50%;
     margin-left: -7px;
-    margin-top: 0px;
+    margin-top: 2.85em;
   }
 }
 
@@ -106,45 +104,86 @@ Main components
 
 .cd-timeline-content {
   position: relative;
-  margin-left: 60px;
   background: white;
   border-radius: 0.25em;
-  padding: 1em;
-  box-shadow: 0 3px 0 #d7e4ed;
 }
 .cd-timeline-content .cd-date {
   float: left;
-  padding: .8em 0;
   opacity: .7;
 }
-/*
-.cd-timeline-content::before {
-  content: '';
-  position: absolute;
-  top: 16px;
-  right: 100%;
-  height: 0;
-  width: 0;
-  border: 7px solid transparent;
-  border-right: 7px solid white;
-}*/
-
 .cd-timeline-content:after {
   content: "";
   display: table;
   clear: both;
 }
 
+.content-header{
+  height: 1.5em;
+}
+.arrow_box {
+   position: relative;
+   background: #446e6b;
+   border-left: 10px solid #ffffff;
+   height: 3.7em;
+   padding-top: 15px;
+   padding-bottom: 10px;
+   margin: 0px;
+}
+.arrow_box h1{
+  position: absolute;
+  left: 25%;
+  color: white;
+  padding: 0px;
+  margin: 0px;
+  font-size:20px;
+}
+.arrow_box h2{
+  position: absolute;
+  left: 0%;
+  bottom: 5%;
+  text-align: left;
+  color: white;
+  margin: 0px;
+  margin-left: 10px;
+  padding: 0px;
+  font-size:15px;
+}
+
+.arrow_box::after {
+   right: 100%;
+   top: 50%;
+   border: solid transparent;
+   content: " ";
+   height: 0;
+   width: 0;
+   position: absolute;
+   pointer-events: none;
+   border-color: rgba(68, 110, 107, 0);
+   border-right-color: #446e6b;
+   border-width: 10px;
+   margin-top: -10px;
+}
 
 
+.content-line {
+  margin-left: 30px;
+  margin-right: 30px;
+  padding: 10px;
+  border-bottom: 1px solid #333333;
+}
+
+.content-line input, .content-line button, .content-header button{
+  width: 1em;
+  height: 1em;
+  float: right;
+  margin-right: .5em;
+  margin-top: 1%;
+}
 
 
 
 @media only screen and (min-width: 1170px) {
   .cd-timeline-content {
-    margin-left: 2%;
-    margin-right: 2%;
-    padding: 1.6em;
     width: 40%;
   }
   /*
@@ -160,10 +199,11 @@ Main components
     left: 123%;
     top: 6px;
     font-size: 16px;
-    font-size: 1rem;
+    font-size: 1em;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
+    right: 9%;
   }
   
   /*
