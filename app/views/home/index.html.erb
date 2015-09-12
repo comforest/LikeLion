@@ -1,98 +1,42 @@
-<%= BigGoal.all.last.id %>
-
 <section id="cd-timeline">
 
-<div class = 'age-nav'>
-	<p>10대</p>
-	<p>20대</p>
-	<p>30대</p>
-	<p>40대</p>
-	<p>50대</p>
-	<p>60대</p>
-	<p>70대</p>
-	<p>80대</p>
-	<p>90대</p>
-</div>
-	
-	<div class="cd-timeline-block">
-		<div class="cd-timeline-img age-1"></div>
- 
-		<div class="cd-timeline-content">
-			<div class="content-header">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<div class="arrow_box">
-			 	<h1> 사용자 1000명 달성</h1>
-			 	<h2>AGE <span style="font-size:1.7em">21</span></h2>
-			</div>
-			<div class="content-line">
-				웹사이트 개발하기
-		 		<input type="checkbox">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<div class="content-line">
-				웹사이트 개발하기
-		 		<input type="checkbox">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<p style="text-align:center;font-size:30px;"><button type="button" class="btn btn-default btn-lg btn-block">실행 계획 추가</button></p>
-		</div>
+	<div class = 'age-nav'>
+		<p>10대</p>
+		<p>20대</p>
+		<p>30대</p>
+		<p>40대</p>
+		<p>50대</p>
+		<p>60대</p>
+		<p>70대</p>
+		<p>80대</p>
+		<p>90대</p>
 	</div>
- 
- 	<div class="cd-timeline-block">
-		<div class="cd-timeline-img age-1"></div>
- 
-		<div class="cd-timeline-content">
-			<div class="content-header">
-				<button type="button"></button>
-				<button type="button"></button>
+
+	<% @sg.each do |t| %>
+		<div class="cd-timeline-block age-<%= t.due.year.to_s[2] %>">
+			<div class="cd-timeline-img"></div>
+			<div class="cd-timeline-content">
+				<div class="content-header">
+					<button type="button"></button>
+					<button type="button"></button>
+				</div>
+				<div class="arrow_box">
+				 	<h1> <%= t.title %> </h1>
+				 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
+				</div>
+				
+				<% t.doplans.each do |d| %>
+					<div class="content-line">
+						<%= d.content %>
+				 		<input type="checkbox">
+						<button type="button"></button>
+						<button type="button"></button>
+					</div>
+				<% end %>
+				<p style="text-align:center;font-size:30px;"><button type="button" class="btn btn-default btn-lg btn-block">실행 계획 추가</button></p>
 			</div>
-			<div class="arrow_box">
-			 	<h1> 사용자 1000명 달성</h1>
-			 	<h2>AGE <span style="font-size:1.7em">21</span></h2>
-			</div>
-			<div class="content-line">
-				웹사이트 개발하기
-		 		<input type="checkbox">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<div class="content-line">
-				웹사이트 개발하기
-		 		<input type="checkbox">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<p style="text-align:center;font-size:30px;"><button type="button" class="btn btn-default btn-lg btn-block">실행 계획 추가</button></p>
 		</div>
-	</div><div class="cd-timeline-block">
-		<div class="cd-timeline-img age-1"></div>
- 
-		<div class="cd-timeline-content">
-			<div class="content-header">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<div class="arrow_box">
-			 	<h1> 사용자 1000명 달성</h1>
-			 	<h2>AGE <span style="font-size:1.7em">21</span></h2>
-			</div>
-			<div class="content-line">
-				웹사이트 개발하기
-		 		<input type="checkbox">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<div class="content-line">
-				웹사이트 개발하기
-		 		<input type="checkbox">
-				<button type="button"></button>
-				<button type="button"></button>
-			</div>
-			<p style="text-align:center;font-size:30px;"><button type="button" class="btn btn-default btn-lg btn-block">실행 계획 추가</button></p>
-		</div>
+	<% end %>
+		
 	</div>
 </section>
