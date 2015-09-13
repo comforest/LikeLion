@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150910093924) do
+ActiveRecord::Schema.define(version: 20150913084005) do
 
   create_table "big_goals", force: :cascade do |t|
     t.string   "content"
@@ -28,11 +28,11 @@ ActiveRecord::Schema.define(version: 20150910093924) do
   end
 
   create_table "goal_parts", force: :cascade do |t|
-    t.integer "big_goal_id"
-    t.integer "small_goal_id"
+    t.integer  "big_goal_id"
+    t.integer  "small_goal_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
   end
-
-  add_index "goal_parts", ["big_goal_id", "small_goal_id"], name: "index_goal_parts_on_big_goal_id_and_small_goal_id"
 
   create_table "small_goals", force: :cascade do |t|
     t.string   "title"
