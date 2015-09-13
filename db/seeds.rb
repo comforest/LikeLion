@@ -9,7 +9,7 @@
 BigGoal.create(content: '사업')
 BigGoal.create(content: '가정')
 
-SmallGoal.create(title: '사업 구상하기',due: Date.new(2017,1,1), public_range: 0)
+SmallGoal.create(title: '사업 구상하기',big_goal: 1, due: Date.new(2017,1,1), public_range: 0)
 SmallGoal.create(title: '공부하기',due: Date.new(2018,1,1), public_range: 0)
 SmallGoal.create(title: '잘 놀기',due: Date.new(2019,1,1), public_range: 0)
 
