@@ -1,5 +1,4 @@
 jQuery(document).ready(function($) {
-                console.log("starrt");
         $(".age-nav p").click(function(event){            
                 var txt = $(this).text()[0];
                 console.log('.age-' + txt);
@@ -16,7 +15,6 @@ jQuery(document).ready(function($) {
         $('#modify_button').click(function(){
             $('#modify_done').show();
             $('#modify_button').hide();
-            
         });
         
         $('#modify_done').click(function(){
