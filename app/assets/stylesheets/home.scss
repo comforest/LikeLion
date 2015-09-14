@@ -8,64 +8,64 @@ write big goal
 -------------------------------- */
 
 
-#container{
+#sidemenu{
     
     width: 230px;
     float: left;
 
 }
 
-#title{
+#sidemenu #title{
     
     font-size: 30px;
 
 }
 
-#modify{
+#sidemenu #modify{
     
     font-size: 11px;
     color: #157DEC;
     float: right;
 }
 
-#goal_content{
+#sidemenu #goal_content{
     clear : both;
     margin-left: 10px;
 }
 
-#fixed_list{
+#sidemenu #fixed_list{
     
 }
 
-#all{
+#sidemenu #all{
     
 }
 
-#important{
+#sidemenu #important{
     
 }
 
-#list_item{
+#sidemenu #list_item{
     
 }
 
-#adthegoal{
+#sidemenu #adthegoal{
 
 }
 
-#ad_button{
+#sidemenu #ad_button{
     
 }
 
-#goal_form{
+#sidemenu #goal_form{
     
 }
 
-#color_choice{
+#sidemenu #color_choice{
     
 }
 
-#new_goal_name{
+#sidemenu #new_goal_name{
     
     height: 25px;
     width: 120px;
@@ -73,19 +73,19 @@ write big goal
     
 }
 
-#new_goal_color{
+#sidemenu #new_goal_color{
   
     height: 25px;
     width: 25px;
     background-color: #7E354D
 }
 
-#plusbutton{
+#sidemenu #plusbutton{
     height : 25px;
     width : 25px;
 }
 
-#rec01{
+#sidemenu #rec01{
     
     background-color:#008080;
     height: 25px;
