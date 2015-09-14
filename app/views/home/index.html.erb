@@ -24,20 +24,27 @@
 					<button type="button"></button>
 					<button type="button"></button>
 				</div>
-				<div class="arrow_box">
-				 	<h1> <%= t.title %> </h1>
-				 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
-				</div>
-				
-				<% t.doplans.each do |d| %>
-					<div class="content-line">
-						<%= d.content %>
-				 		<input type="checkbox">
-						<button type="button"></button>
-						<button type="button"></button>
+				<div class="content-body">
+					<div class="arrow_box">
+					 	<h1> <%= t.title %> </h1>
+					 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
 					</div>
-				<% end %>
-				<p style="text-align:center;font-size:30px;"><button type="button" class="btn btn-default btn-lg btn-block">실행 계획 추가</button></p>
+					
+					<% t.doplans.each do |d| %>
+						<div class="doplan-line">
+							<%= d.content %>
+			                <input type="checkbox" checked="checked" name="option">
+			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">
+			                <img src="http://goo.gl/ntkbMh">
+						</div>
+					<% end %>
+					
+					
+			        <div class="add-plan">
+			            <input type="text" style="width:350px" placeholder="실행 계획 추가...">
+			            <a href="#"><img src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB"></a>
+			        </div>
+				</div>
 			</div>
 		</div>
 	<% end %>

@@ -1,4 +1,6 @@
-
+body{
+  background: #2d9;
+}
 
 
 
@@ -102,11 +104,8 @@ timeline
 
 
 
-
-.cd-timeline-content {
-  position: relative;
-  background: white;
-  border-radius: 0.25em;
+.cd-timeline-content{
+  position:relative;
 }
 .cd-timeline-content .cd-date {
   float: left;
@@ -121,10 +120,18 @@ timeline
 .content-header{
   height: 1.5em;
 }
+.content-header *{
+  float:right;
+  margin-left: 10px;
+}
+.content-body {
+  background: white;
+  border-radius: 0.25em;
+  padding-bottom: 1em;
+}
 .arrow_box {
    position: relative;
    background: #446e6b;
-   border-left: 10px solid #ffffff;
    height: 3.7em;
    padding-top: 15px;
    padding-bottom: 10px;
@@ -166,21 +173,20 @@ timeline
 }
 
 
-.content-line {
+.doplan-line {
   margin-left: 30px;
   margin-right: 30px;
   padding: 10px;
   border-bottom: 1px solid #333333;
 }
 
-.content-line input, .content-line button, .content-header button{
+.doplan-line input, .doplan-line button, .doplan-line img, .doplan-header button{
   width: 1em;
   height: 1em;
   float: right;
-  margin-right: .5em;
+  margin-left: .5em;
   margin-top: 1%;
 }
-
 
 
 @media only screen and (min-width: 1170px) {
@@ -218,7 +224,7 @@ timeline
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
-    right: 9%;
+    right: 8%;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
@@ -398,6 +404,10 @@ write Small Goal
   top: 0;
   right: 30%;
 }
+#write-small-goal .doplan-line{
+  margin: 0;
+}
+/*
 #write-small-goal #plan-list .list-item>div>div{
   display:inline-block;
 }
@@ -407,24 +417,25 @@ write Small Goal
   position:relative;
   margin: 0px;
   padding: 0px;
-}
+}*/
 
-#write-small-goal #plan-list .list-item+div{
+.add-plan{
   margin: 0 5%;
+  margin-top: 20px;
   background-color:white;
   height:30px;
 }
-#write-small-goal #plan-list .list-item+div input{
+.add-plan input{
   position:relative;
   top: 0px;
   border:none;
   outline:none;
-  width:240px;
+  width:250px;
   height:30px;
   display: inline-block;
   margin-left: 10px;
 }
-#write-small-goal #plan-list .list-item+div a{
+.add-plan a{
   display: inline-block;
   float: right;
   margin-right: 10px;
