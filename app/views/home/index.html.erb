@@ -1,6 +1,72 @@
-<% @bg.each do |t| %>
-	<%= t.content %><br>
-<% end %>
+<!------------------------------------
+	big goal list
+-------------------------------------->
+<div id="container">
+    <div id="title">
+        목표 보기
+    </div>
+    <div id="modify">
+        <p id="modify_button">편집</p>
+        <p id="modify_done">완료</p>
+    </div>
+    <div id="goal_content">
+        <div id="fixed_list">
+            
+            <div id="all">
+                <div style="display:inline-block;"><img style="width:25px;height:25px;" src="http://i0.wp.com/www.mcfloogle.com/wp-content/uploads/2015/06/rainbow-rectangle.png?resize=514%2C318"></div>
+                <div style="display:inline-block;">모두보기</div>
+                <div style="display:inline-block;"><input type="checkbox"></div>
+            </div>
+            
+            <div id="important">
+                <div style="display:inline-block;"><img style="width:25px; height:25px;" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Star-icon.png"></div>
+                <div style="display:inline-block;">중요계획</div>
+                <div style="display:inline-block;"><input type="checkbox"></div>
+            </div>
+        </div>
+        
+        <div id="list_item">
+            <div id="list01">
+                <div id="rec01" style="display:inline-block;"></div>
+                <div style="display:inline-block;">사업성공</div>
+                <div style="display:inline-block;"><input type="checkbox" id="check"></div>    
+            </div>
+            
+            <% @bg.each do |b| %>
+            <div>   
+                <div style="display:inline-block;" id="new_goal_color"></div>
+                <div style="display:inline-block;"><%= b.content %></div>
+                <div style="display:inline-block;"><input type="checkbox"></div>
+            </div>
+            <% end %>
+        </div>
+        
+        <div id="adthegoal">
+            
+            <div id="ad_button">
+                <div style="display:inline-block;"><img style="width:25px; height:25px;" src="http://cdn2.hubspot.net/hubfs/203330/plus.png"></div>
+                <div style="display:inline-block;">새 목표 추가하기</div>
+                <div style="display:inline-block;"></div>
+            </div>
+            
+            <div id="goal_form">
+                <div id="color_choice"></div>
+                <input type="text" id="new_goal_name">
+                <input type="button" id="plusbutton" value="+">
+            </div>
+            
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+<!------------------------------------
+	time
+-------------------------------------->
 
 <section id="cd-timeline">
 
