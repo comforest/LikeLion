@@ -5,6 +5,10 @@ jQuery(document).ready(function($) {
                 console.log('.age-' + txt);
                 $('html, body').animate({scrollTop : $('.age-' + txt).offset().top}, 500);
         });
+       
+       
+        /* 큰목표추가하기부분 jQuery.. 근데 왜 안먹지 ㅠ*/
+        
         
         $('#goal_form').hide();
         $('#modify_done').hide();
@@ -49,4 +53,6 @@ jQuery(document).ready(function($) {
                 });
             
         });
+        
+         /* 큰목표추가하기 jQuery 끝*/
 });
