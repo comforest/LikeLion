@@ -6,4 +6,14 @@ class HomeController < ApplicationController
   
   def writegoal
   end
+  
+  def add_goal
+    @bg = BigGoal.new
+    @bg.content = params[:content]
+    @bg.save
+    
+    
+    render :text => ""
+    
+  end
 end
