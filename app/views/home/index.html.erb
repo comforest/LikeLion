@@ -26,17 +26,12 @@
         </div>
         
         <div id="list_item">
-            <div id="list01">
-                <div id="rec01" style="display:inline-block;"></div>
-                <div style="display:inline-block;">사업성공</div>
-                <div style="display:inline-block;"><input type="checkbox" id="check"></div>    
-            </div>
             
             <% @bg.each do |b| %>
-            <div>   
-                <div style="display:inline-block;" id="new_goal_color"></div>
-                <div style="display:inline-block;"><%= b.content %></div>
-                <div style="display:inline-block;"><input type="checkbox"></div>
+            <div id="list<%= b.id %>">
+                <div style="display:inline-block;" id="goal_color"></div>
+                <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+                <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
             </div>
             <% end %>
         </div>
