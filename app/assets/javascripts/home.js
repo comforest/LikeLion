@@ -13,6 +13,7 @@ jQuery(document).ready(function($) {
         $('#modify_done').hide();
         /*편집,완료 버튼*/
         $('#modify_button').click(function(){
+            console.log("test");
             $('#modify_done').show();
             $('#modify_button').hide();
         });
