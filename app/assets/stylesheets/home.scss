@@ -275,7 +275,7 @@ timeline
   border-bottom: 1px solid #333333;
 }
 
-.doplan-line input, .doplan-line button, .doplan-line img, .content-header img{
+.doplan-line input, .doplan-line button, .doplan-line img, .content-header img, .content-header button{
   width: 1em;
   height: 1em;
   float: right;
@@ -516,7 +516,7 @@ write Small Goal
   background-color:white;
   height:30px;
 }
-.add-plan input{
+.add-plan input[type=text]{
   position:relative;
   top: 0px;
   border:none;
@@ -526,8 +526,13 @@ write Small Goal
   display: inline-block;
   margin-left: 10px;
 }
-.add-plan a{
+.add-plan img{
   display: inline-block;
   float: right;
   margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background:url("https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB") no-repeat;
+  background-size: 30px;
 }

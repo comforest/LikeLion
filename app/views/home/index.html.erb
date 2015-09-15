@@ -91,6 +91,7 @@
     					 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
     					</div>
     					
+    					<div class="doplan-list">
     					<% t.doplans.each do |d| %>
     						<div class="doplan-line">
     							<%= d.content %>
@@ -99,12 +100,13 @@
     			                <img src="http://goo.gl/ntkbMh">
     						</div>
     					<% end %>
+    					</div>
     					
     					
-    			        <div class="add-plan">
-    			            <input type="text" style="width:85%" placeholder="실행 계획 추가...">
-    			            <a href="#"><img src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB"></a>
-    			        </div>
+                        <div class="add-plan">
+                            <img class="add-plan-button" value="<%= t.id%>" src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB">
+                            <input type="text" placeholder="실행 계획 추가...">
+                        </div>
     				</div>
     			</div>
     		</div>
