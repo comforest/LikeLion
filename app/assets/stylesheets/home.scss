@@ -12,7 +12,10 @@ write big goal
     
     width: 230px;
     float: left;
-
+    z-index: 101;
+    position: relative;
+    left: 40px;
+    top: 30px;
 }
 
 #sidemenu #title{
@@ -120,6 +123,7 @@ timeline
   margin-top: 2em;
   margin-bottom: 2em;
   width:80%;
+  left:280px;
 }
 #cd-timeline::before {
   /* this is the vertical line */
@@ -137,7 +141,7 @@ timeline
     margin-bottom: 3em;
   }
   #cd-timeline::before {
-    left: 50%;
+    left: 42%;
     margin-left: -2px;
   }
 }
@@ -191,7 +195,7 @@ timeline
   .cd-timeline-img {
     width: 14px;
     height: 14px;
-    left: 50%;
+    left: 42%;
     margin-left: -7px;
     margin-top: 2.85em;
   }
@@ -275,7 +279,7 @@ timeline
   border-bottom: 1px solid #333333;
 }
 
-.doplan-line input, .doplan-line button, .doplan-line img, .doplan-header button{
+.doplan-line input, .doplan-line button, .doplan-line img, .content-header img, .content-header button{
   width: 1em;
   height: 1em;
   float: right;
@@ -313,13 +317,9 @@ timeline
   }
 
   
-  .cd-timeline-block:nth-child(odd) .cd-timeline-content {
-    float: left;
-    left: 8%;
-  }
   .cd-timeline-block:nth-child(even) .cd-timeline-content {
     float: right;
-    right: 8%;
+    right: 16%;
   }
   .cd-timeline-block:nth-child(even) .cd-timeline-content .cd-date {
     left: auto;
@@ -520,7 +520,7 @@ write Small Goal
   background-color:white;
   height:30px;
 }
-.add-plan input{
+.add-plan input[type=text]{
   position:relative;
   top: 0px;
   border:none;
@@ -530,8 +530,13 @@ write Small Goal
   display: inline-block;
   margin-left: 10px;
 }
-.add-plan a{
+.add-plan img{
   display: inline-block;
   float: right;
   margin-right: 10px;
+  width: 30px;
+  height: 30px;
+  border: 0;
+  background:url("https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB") no-repeat;
+  background-size: 30px;
 }
