@@ -7,16 +7,7 @@
             목표 보기
         </div>
 <<<<<<< HEAD
-        
-        <div id="list_item">
-            
-            <% @bg.each do |b| %>
-            <div id="list<%= b.id %>">
-                <div style="display:inline-block;" id="goal_color"></div>
-                <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
-                <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
-            </div>
-            <% end %>
+  
 =======
         <div id="modify">
             <p id="modify_button">편집</p>
@@ -42,9 +33,9 @@
             <div id="list_item">
                 <% @bg.each do |b| %>
                 <div>   
-                    <div style="display:inline-block;" id="new_goal_color"></div>
-                    <div style="display:inline-block;"><%= b.content %></div>
-                    <div style="display:inline-block;"><input type="checkbox"></div>
+                    <div style="display:inline-block;" id="goal_color"></div>
+                    <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+                    <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
                 </div>
                 <% end %>
             </div>
