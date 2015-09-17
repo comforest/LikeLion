@@ -6,9 +6,22 @@
         <div id="title">
             목표 보기
         </div>
+<<<<<<< HEAD
+        
+        <div id="list_item">
+            
+            <% @bg.each do |b| %>
+            <div id="list<%= b.id %>">
+                <div style="display:inline-block;" id="goal_color"></div>
+                <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+                <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
+            </div>
+            <% end %>
+=======
         <div id="modify">
             <p id="modify_button">편집</p>
             <p id="modify_done">완료</p>
+>>>>>>> 950633cd054d33664b761376a8362ca39d28fcb9
         </div>
         <div id="goal_content">
             <div id="fixed_list">
