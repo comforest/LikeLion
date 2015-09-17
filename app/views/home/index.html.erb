@@ -1,3 +1,69 @@
+<head>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<style type="text/css">
+      html,body { height: 100%; margin: 0px; padding: 0px; }
+      #full {height: 100% }
+    .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+    }
+    .footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+    }
+    .btn {
+      -webkit-border-radius: 10;
+      -moz-border-radius: 10;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #000333;
+      font-size: 20px;
+      background: #b4e2f7;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: #89cffa;
+      text-decoration: none;
+    }
+
+
+</style>
+</head>
+
+
+<div class="row" id="full">
+    <div class="col-md-1" style="height:100%; background-color:#60A6B9">
+        <div id="wrapper">
+            <a href="/home/index">
+                <img src="/assets/icon.jpg" style="height:100px; width:100px">
+            </a>
+            <div class='push'></div>
+            <div class='push'></div>
+            <div class='push'></div>
+        </div>
+        <div id="footer">
+        <% if user_signed_in? %>
+        <%= current_user.email %>
+        <a class="btn btn-md" href="#" role="button">마이페이지</a>
+        <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
+        <% else %>
+        <br><br>
+        <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
+        <% end %>
+        </div>
+	</div>
+
+</div>
+
 <!------------------------------------
 	big goal list
 -------------------------------------->
