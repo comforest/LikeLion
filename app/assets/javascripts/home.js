@@ -10,23 +10,25 @@
             function(){
                 var txt = $(this).next().val();
                 var mthis = $(this);
-                $.ajax({
-                    data: { content: txt, sgid: mthis.attr("value")},
-                    url: "/home/add_doplan",
-                    success: function(){
-                        console.log(mthis.parent().prev().attr("class"));
-                        mthis.parent().prev().append(
-    						'<div class="doplan-line">' +
-    							txt +
-    			                '<input type="checkbox" name="option">' +
-    			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">' +
-    			                '<img src="http://goo.gl/ntkbMh">' +
-    						'</div>'
-    					);
-                        
-                        console.log(mthis.parent().prev().attr("class"));
-                    }
-                });
+                if(txt != ""){
+                    $.ajax({
+                        data: { content: txt, sgid: mthis.attr("value")},
+                        url: "/home/add_doplan",
+                        success: function(){
+                            console.log(mthis.parent().prev().attr("class"));
+                            mthis.parent().prev().append(
+        						'<div class="doplan-line">' +
+        							txt +
+        			                '<input type="checkbox" name="option">' +
+        			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">' +
+        			                '<img src="http://goo.gl/ntkbMh">' +
+        						'</div>'
+        					);
+                            
+                            console.log(mthis.parent().prev().attr("class"));
+                        }
+                    });
+                }
         });
        
        

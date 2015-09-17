@@ -11,6 +11,7 @@ class HomeController < ApplicationController
     dp = Doplan.new
     dp.small_goal_id = params[:sgid]
     dp.content = params[:content]
+    dp.check = false
     dp.save
     
     render :text => ""
