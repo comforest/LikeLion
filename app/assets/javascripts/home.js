@@ -15,13 +15,20 @@ jQuery(document).ready(function($) {
                     $.ajax({
                         data: { content: txt, sgid: sgid},
                         url: "/home/add_doplan",
-                        success: function(){
+                        success: function(data){
+                            console.log(data[:id]);
                             mthis.parent().prev().append(
         						'<div class="doplan-line">' +
-        							'<p>' + txt + '</p>' +
-        			                '<input type="checkbox" name="option">' +
-        			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
-        			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+        						    '<div>' +
+            							'<p>' + txt + '</p>' +
+            			                '<input type="checkbox" checked="checked" name="option">' +
+            			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">' +
+            			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+        			                '</div>' +
+        		                    '<div style="display: none" value="<%= d.id%>" >' +
+        		                        '<input type="text" value="<%=d.content%>">' +
+        		                        '<input class = "edit_submit" type="submit" value="확인">' +
+        		                    '</div>' +
         						'</div>'
         					);
         					mthis.next().val("")
@@ -67,6 +74,40 @@ jQuery(document).ready(function($) {
             });
         });
        
+        
+        //별 관련
+        $(".star_blank").click(function(){
+           
+           $(this).hide();
+           $(this).next().show();
+           
+        });
+        $(".star_full").click(function(){
+          
+           $(this).hide();
+           $(this).prev().show();
+           
+        });
+        
+        //접기 관련
+        
+         $(".up").click(function(){
+           $(this).parent().next().hide();
+           $(this).hide();
+           $(this).next().show();
+           
+        });
+        $(".down").click(function(){
+           $(this).parent().next().show();
+           $(this).hide();
+           $(this).prev().show();
+           
+        });
+            
+        
+        
+        
+        
         /* 큰목표추가하기부분 jQuery.. 근데 왜 안먹지 ㅠ*/
         
         
@@ -97,6 +138,10 @@ jQuery(document).ready(function($) {
         
         
         /*편집,완료 버튼 끝*/
+        
+        
+        
+        
         
         /*새목표추가하기버튼*/
         $('#ad_button').click(function(){

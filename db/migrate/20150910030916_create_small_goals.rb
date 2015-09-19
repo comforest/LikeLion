@@ -4,6 +4,7 @@ class CreateSmallGoals < ActiveRecord::Migration
       t.string :title
       t.date :due
       t.integer :public_range
+      t.boolean :favorite
       t.timestamps null: false
     end
   end
