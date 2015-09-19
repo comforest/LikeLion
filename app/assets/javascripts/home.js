@@ -103,4 +103,31 @@ jQuery(document).ready(function($) {
          /* 큰목표추가하기 jQuery 끝*/
          
          
+         
+         /*  새 페이지 목표 추가하기 */
+         
+          
+         
+         
+         /*  새 페이지 실행계획 추가하기 */
+         
+         $('#write-small-goal .add-plan a').click(function(){
+            console.log("test");
+            var txt = $('#add_dolist').val();
+            console.log(txt);
+            $('#plan-list .list-item').append(
+			'<div class="doplan-line">' +
+				txt +
+                '<input type="checkbox" name="option">' +
+                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
+                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+			'</div>'
+	    	);
+         });
+         
+         /*  새 페이지 실행계획 추가하기 끝 */
+         
+         
+         
 });
+
