@@ -63,11 +63,6 @@
                 <div style="display:inline-block;"><input type="checkbox"></div>
             </div>
             <% end %>
-
-            <div id="modify">
-                <p id="modify_button">편집</p>
-                <p id="modify_done">완료</p>
-            </div>
             
             <div id="adthegoal">
                 
@@ -75,15 +70,6 @@
                     <div style="display:inline-block;"><img style="width:25px; height:25px;" src="http://cdn2.hubspot.net/hubfs/203330/plus.png"></div>
                     <div style="display:inline-block;">새 목표 추가하기</div>
                     <div style="display:inline-block;"></div>
-                </div>
-                <div id="list_item">
-                    <% @bg.each do |b| %>
-                    <div>   
-                        <div style="display:inline-block;" id="goal_color"></div>
-                        <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
-                        <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
-                    </div>
-                    <% end %>
                 </div>
                 
                 <div id="goal_form">
