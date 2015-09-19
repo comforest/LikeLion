@@ -20,8 +20,8 @@ jQuery(document).ready(function($) {
         						'<div class="doplan-line">' +
         							'<p>' + txt + '</p>' +
         			                '<input type="checkbox" name="option">' +
-        			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
-        			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+        			                '<img src="/assets/delete_icon.jpg" class="del_button" value="0">' +
+        			                '<img src="/assets/modify_icon.jpg" class="edit_button">' +
         						'</div>'
         					);
         					mthis.next().val("")
@@ -160,8 +160,8 @@ jQuery(document).ready(function($) {
 			'<div class="doplan-line">' +
 				txt +
                 '<input type="checkbox" name="option">' +
-                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
-                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+                '<img src="/assets/delete_icon.jpg" class="del_button" value="0">' +
+                '<img src="/assets/modify_icon.jpg" class="edit_button">' +
 			'</div>'
 	    	);
          });
