@@ -48,7 +48,7 @@ write big goal
 
 #sidemenu{
     
-    width: 10%;
+    width: 17%;
     float: left;
     z-index: 101;
     position: relative;
@@ -66,7 +66,8 @@ write big goal
     
     font-size: 11px;
     color: #157DEC;
-    float: right
+    float: right;
+    margin-right: 10px;
 }
 
 #sidemenu #goal_content{
