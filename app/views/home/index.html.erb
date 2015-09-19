@@ -6,25 +6,22 @@
 </head>
 
 
-<div id="full">
-    <div style="height:100%; background-color:#60A6B9">
-        <div id="wrapper">
-            <a href="/home/index">
-                <img src="/assets/icon.jpg" style="height:100px; width:100%">
-            </a>
-        </div>
-        <div id="footer">
-            <% if user_signed_in? %>
-                <%= current_user.email %>
-                <a class="btn btn-md" href="#" role="button">마이페이지</a>
-                <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
-            <% else %>
-                <br><br>
-                <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
-            <% end %>
-        </div>
-	</div>
-
+<div id="full" style="position: fixed;">
+    
+    <a href="/home/index">
+        <img src="/assets/icon.jpg" style="height:100px; width:100%">
+    </a>
+    
+    <div id="footer" style="position: fixed;">
+        <% if user_signed_in? %>
+            <%= current_user.email %>
+            <a class="btn btn-md" href="#" role="button">마이페이지</a>
+            <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
+        <% else %>
+            <br><br>
+            <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
+        <% end %>
+    </div>
 </div>
 
 <div id="sidemenu">
@@ -32,9 +29,7 @@
         목표 보기
     </div>
     
-    <div id="list_item">
-        
-    </div>
+
     <div id="modify">
         <p id="modify_button">편집</p>
         <p id="modify_done">완료</p>
