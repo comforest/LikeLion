@@ -132,7 +132,6 @@
 			                <img src="/assets/delete_icon.jpg">
 			                <img src="/assets/modify_icon.jpg">
 				</div>
-				
 				<div class="arrow_box">
 				 	<h1> <%= t.title %> </h1>
 				 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
@@ -145,9 +144,9 @@
                     
                 </div>
                 
-				<div class="content-body">
+				<div class="content-body"  style="display: none">
 					
-					<div class="doplan-list">
+					<div class="doplan-list" >
 					<% t.doplans.each do |d| %>
 						<div class="doplan-line">
 						    <div>
