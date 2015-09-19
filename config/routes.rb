@@ -8,6 +8,9 @@ Rails.application.routes.draw do
   get 'home/add_doplan'
   get 'home/edit_doplan'
   get 'home/rm_doplan'
+  get ":controller(/:action(/:id))"
+  post ":controller(/:action(/:id))"
+  
   
   
   # The priority is based upon order of creation: first created -> highest priority.
