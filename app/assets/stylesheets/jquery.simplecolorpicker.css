@@ -43,7 +43,7 @@
 .simplecolorpicker.icon,
 .simplecolorpicker span.color {
   display: inline-block;
-
+  width: 22px;
   cursor: pointer;
   border: 1px solid transparent;
 }
