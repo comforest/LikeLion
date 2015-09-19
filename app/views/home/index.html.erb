@@ -1,47 +1,13 @@
-<head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <style type="text/css">
-      html,body { height: 100%; margin: 0px; padding: 0px; }
-      #full {height: 100% }
-    .wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
-    }
-    .footer, .push {
-    height: 142px; /* .push must be the same height as .footer */
-    }
-    .btn {
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
-      border-radius: 10px;
-      font-size: 15px;
-      color: #000333;
-      font-size: 20px;
-      background: #b4e2f7;
-      text-decoration: none;
-    }
-    
-    .btn:hover {
-      background: #89cffa;
-      text-decoration: none;
-    }
 
 
 </style>
 </head>
 
 
-<div class="row" id="full">
-    <div class="col-md-1" style="height:100%; background-color:#60A6B9">
+<div id="full">
+    <div style="height:100%; background-color:#60A6B9">
         <div id="wrapper">
             <a href="/home/index">
                 <img src="/assets/icon.jpg" style="height:100px; width:100px">
@@ -64,9 +30,6 @@
 
 </div>
 
-<!------------------------------------
-big goal list
--------------------------------------->
 <div id="sidemenu">
     <div id="title">
         목표 보기
@@ -101,8 +64,7 @@ big goal list
                 <div style="display:inline-block;"><input type="checkbox"></div>
             </div>
         </div>
-<<<<<<< HEAD
-        
+
         <div id="list_item">
             <% @bg.each do |b| %>
             <div>   
@@ -111,44 +73,38 @@ big goal list
                 <div style="display:inline-block;"><input type="checkbox"></div>
             </div>
             <% end %>
-=======
-<<<<<<< HEAD
-  
-=======
-        <div id="modify">
-            <p id="modify_button">편집</p>
-            <p id="modify_done">완료</p>
->>>>>>> 950633cd054d33664b761376a8362ca39d28fcb9
->>>>>>> 48e23835c3d73eec9e271226b4197d526be5a8b0
-        </div>
-        
-        <div id="adthegoal">
+
+            <div id="modify">
+                <p id="modify_button">편집</p>
+                <p id="modify_done">완료</p>
+            </div>
             
-<<<<<<< HEAD
-            <div id="ad_button">
-                <div style="display:inline-block;"><img style="width:25px; height:25px;" src="http://cdn2.hubspot.net/hubfs/203330/plus.png"></div>
-                <div style="display:inline-block;">새 목표 추가하기</div>
-                <div style="display:inline-block;"></div>
-=======
-            <div id="list_item">
-                <% @bg.each do |b| %>
-                <div>   
-                    <div style="display:inline-block;" id="goal_color"></div>
-                    <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
-                    <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
+            <div id="adthegoal">
+                
+                <div id="ad_button">
+                    <div style="display:inline-block;"><img style="width:25px; height:25px;" src="http://cdn2.hubspot.net/hubfs/203330/plus.png"></div>
+                    <div style="display:inline-block;">새 목표 추가하기</div>
+                    <div style="display:inline-block;"></div>
                 </div>
-                <% end %>
->>>>>>> 48e23835c3d73eec9e271226b4197d526be5a8b0
+                <div id="list_item">
+                    <% @bg.each do |b| %>
+                    <div>   
+                        <div style="display:inline-block;" id="goal_color"></div>
+                        <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+                        <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
+                    </div>
+                    <% end %>
+                </div>
+                
+                <div id="goal_form">
+                    <div id="color_choice"></div>
+                    <input type="text" id="new_goal_name">
+                    <input type="button" id="plusbutton" value="+">
+                </div>
+                
             </div>
-            
-            <div id="goal_form">
-                <div id="color_choice"></div>
-                <input type="text" id="new_goal_name">
-                <input type="button" id="plusbutton" value="+">
-            </div>
-            
-        </div>
         
+        </div>
     </div>
 </div>
 

@@ -550,3 +550,41 @@ write Small Goal
   background:url("https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB") no-repeat;
   background-size: 30px;
 }
+
+
+
+
+
+// 은영 누나
+
+
+      //html,body { height: 100%; margin: 0px; padding: 0px; }
+      #full {
+        height: 100%;
+        width:10%;
+        display: inline-block;
+      }
+    .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+    }
+    .footer, .push {
+    height: 142px; /* .push must be the same height as .footer */
+    }
+    .btn {
+      -webkit-border-radius: 10;
+      -moz-border-radius: 10;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #000333;
+      font-size: 20px;
+      background: #b4e2f7;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: #89cffa;
+      text-decoration: none;
+    }
