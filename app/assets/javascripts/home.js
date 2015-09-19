@@ -18,7 +18,7 @@ jQuery(document).ready(function($) {
                         success: function(){
                             mthis.parent().prev().append(
         						'<div class="doplan-line">' +
-        							txt +
+        							'<p>' + txt + '</p>' +
         			                '<input type="checkbox" name="option">' +
         			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
         			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
                 success: function(){
                     mthis.parent().prev().show();
                     mthis.parent().hide();
-                    mthis.parent().prev().find(":first-child").val(txt);
+                    mthis.parent().prev().find(":first-child").text(txt);
                 }
             });
         });
@@ -106,17 +106,30 @@ jQuery(document).ready(function($) {
         
         $('#goal_form').hide();
         $('#modify_done').hide();
+        $('[id=modify_delete]').hide();
         /*편집,완료 버튼*/
         $('#modify_button').click(function(){
             $('#modify_done').show();
             $('#modify_button').hide();
+            $('[id=goal_check]').hide();
+            $('[id=side_check]').hide();
+            $('[id=modify_delete]').show();
         });
         
         $('#modify_done').click(function(){
             $('#modify_button').show();
             $('#modify_done').hide();
-            
+            $('[id=goal_check]').show();
+            $('[id=modify_delete]').hide();
+
         });
+        
+        //목표삭제
+        
+    
+        
+        
+        
         /*편집,완료 버튼 끝*/
         
         
@@ -153,15 +166,18 @@ jQuery(document).ready(function($) {
         
          /* 큰목표추가하기 jQuery 끝*/
          
+
+ 
+         
          
          
          /*  새 페이지 목표 추가하기 */
          
-         $('#write-small-goal .add_cate a').click(function(){
+         $('#write-small-goal .add_cate img').click(function(){
             console.log("test");
             var txt = $('#add_docate').val();
             console.log(txt);
-            $('#biggoal .list .list-second').append(
+            $('#biggoal .list .list-container').append(
 			'<div class="list-item">' +
             '<div style= "background: #0ba29b;"> </div>' +
             '<div style="">' + txt + '</div>' +
@@ -191,6 +207,15 @@ jQuery(document).ready(function($) {
          /*  새 페이지 실행계획 추가하기 끝 */
          
          
-         
+         /*색깔추가 */
+         $('select[name="colorpicker"]').simplecolorpicker();
+        $('select[name="colorpicker"]').simplecolorpicker('selectColor', '#7bd148');
+        $('select[name="colorpicker"]').simplecolorpicker('destroy');
+                
+        $('select[name="colorpicker"]').simplecolorpicker({
+          picker: true
+          }).on('change', function() {
+          $(document.body).css('background-color', $('select[name="colorpicker"]').val());
+});        
 });
 
