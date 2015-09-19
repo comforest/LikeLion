@@ -54,6 +54,9 @@ write big goal
     position: relative;
     background-color: #FFFFFF;
     display:inline-block;
+    left : 6%;
+    top: 0%;
+    bottom: 0%;
 }
 
 #sidemenu #title{
@@ -161,8 +164,8 @@ timeline
   padding: 2em 0;
   margin-top: 2em;
   margin-bottom: 2em;
-  width:80%;
-  left:280px;
+  width:70%;
+  left:25%;
 }
 #cd-timeline::before {
   /* this is the vertical line */
@@ -320,12 +323,18 @@ timeline
   border-bottom: 1px solid #333333;
 }
 
+.doplan-line p{
+  margin: 0px;
+  display: inline-block;
+}
+
 .doplan-line input[type=checkbox],.doplan-line button, .doplan-line img, .content-header img, .content-header button{
   width: 1em;
   height: 1em;
   float: right;
   margin-left: .5em;
   margin-top: 1%;
+  display: inline-block;
 }
 .doplan-line input[type=text]{
   width: 85%;
@@ -468,7 +477,7 @@ write Small Goal
 
 #write-small-goal #biggoal .add_cate{
   position:relative;
-  top:60px;
+  bottom: -15px;
 }
 #write-small-goal #biggoal .add_cate div{
   display:inline-block;
@@ -549,7 +558,6 @@ write Small Goal
   margin-bottom:10px
 }
 #write-small-goal #plan-list .list-item>div{
-  height: 100%;
   margin-bottom: 9px;
 }
 #write-small-goal #plan-list .list-item>div>div+div{
