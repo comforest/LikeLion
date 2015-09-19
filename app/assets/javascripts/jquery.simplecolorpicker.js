@@ -169,7 +169,7 @@
       // When a color is clicked, make it the new selected one (unless disabled)
       if ($(e.target).is('[data-disabled]') === false) {
         this.selectColorSpan($(e.target));
-        this.$select.trigger('change');
+        //this.$select.trigger('change');
       }
     },
 
