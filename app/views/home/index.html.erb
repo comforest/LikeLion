@@ -1,47 +1,13 @@
-<head>
-<!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
-
-<!-- Latest compiled and minified JavaScript -->
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <style type="text/css">
-      html,body { height: 100%; margin: 0px; padding: 0px; }
-      #full {height: 100% }
-    .wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
-    }
-    .footer, .push {
-    height: 142px; /* .push must be the same height as .footer */
-    }
-    .btn {
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
-      border-radius: 10px;
-      font-size: 15px;
-      color: #000333;
-      font-size: 20px;
-      background: #b4e2f7;
-      text-decoration: none;
-    }
-    
-    .btn:hover {
-      background: #89cffa;
-      text-decoration: none;
-    }
 
 
 </style>
 </head>
 
 
-<div class="row" id="full">
-    <div class="col-md-1" style="height:100%; background-color:#60A6B9">
+<div id="full">
+    <div style="height:100%; background-color:#60A6B9">
         <div id="wrapper">
             <a href="/home/index">
                 <img src="/assets/icon.jpg" style="height:100px; width:100px">
@@ -64,46 +30,53 @@
 
 </div>
 
-<!------------------------------------
-	big goal list
--------------------------------------->
-<div class="row">
-    <div id="sidemenu" class="cd-md-3">
-        <div id="title">
-            목표 보기
+<div id="sidemenu">
+    <div id="title">
+        목표 보기
+    </div>
+    
+    <div id="list_item">
+        
+        <% @bg.each do |b| %>
+        <div id="list<%= b.id %>">
+            <div style="display:inline-block;" id="goal_color"></div>
+            <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+            <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
         </div>
-<<<<<<< HEAD
-  
-=======
-        <div id="modify">
-            <p id="modify_button">편집</p>
-            <p id="modify_done">완료</p>
->>>>>>> 950633cd054d33664b761376a8362ca39d28fcb9
-        </div>
-        <div id="goal_content">
-            <div id="fixed_list">
-                
-                <div id="all">
-                    <div style="display:inline-block;"><img style="width:25px;height:25px;" src="http://i0.wp.com/www.mcfloogle.com/wp-content/uploads/2015/06/rainbow-rectangle.png?resize=514%2C318"></div>
-                    <div style="display:inline-block;">모두보기</div>
-                    <div style="display:inline-block;"><input type="checkbox"></div>
-                </div>
-                
-                <div id="important">
-                    <div style="display:inline-block;"><img style="width:25px; height:25px;" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Star-icon.png"></div>
-                    <div style="display:inline-block;">중요계획</div>
-                    <div style="display:inline-block;"><input type="checkbox"></div>
-                </div>
+        <% end %>
+    </div>
+    <div id="modify">
+        <p id="modify_button">편집</p>
+        <p id="modify_done">완료</p>
+    </div>
+    <div id="goal_content">
+        <div id="fixed_list">
+            
+            <div id="all">
+                <div style="display:inline-block;"><img style="width:25px;height:25px;" src="http://i0.wp.com/www.mcfloogle.com/wp-content/uploads/2015/06/rainbow-rectangle.png?resize=514%2C318"></div>
+                <div style="display:inline-block;">모두보기</div>
+                <div style="display:inline-block;"><input type="checkbox"></div>
             </div>
             
-            <div id="list_item">
-                <% @bg.each do |b| %>
-                <div>   
-                    <div style="display:inline-block;" id="goal_color"></div>
-                    <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
-                    <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
-                </div>
-                <% end %>
+            <div id="important">
+                <div style="display:inline-block;"><img style="width:25px; height:25px;" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Star-icon.png"></div>
+                <div style="display:inline-block;">중요계획</div>
+                <div style="display:inline-block;"><input type="checkbox"></div>
+            </div>
+        </div>
+
+        <div id="list_item">
+            <% @bg.each do |b| %>
+            <div>   
+                <div style="display:inline-block;" id="new_goal_color"></div>
+                <div style="display:inline-block;"><%= b.content %></div>
+                <div style="display:inline-block;"><input type="checkbox"></div>
+            </div>
+            <% end %>
+
+            <div id="modify">
+                <p id="modify_button">편집</p>
+                <p id="modify_done">완료</p>
             </div>
             
             <div id="adthegoal">
@@ -113,6 +86,15 @@
                     <div style="display:inline-block;">새 목표 추가하기</div>
                     <div style="display:inline-block;"></div>
                 </div>
+                <div id="list_item">
+                    <% @bg.each do |b| %>
+                    <div>   
+                        <div style="display:inline-block;" id="goal_color"></div>
+                        <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+                        <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
+                    </div>
+                    <% end %>
+                </div>
                 
                 <div id="goal_form">
                     <div id="color_choice"></div>
@@ -121,67 +103,73 @@
                 </div>
                 
             </div>
-            
+        
         </div>
     </div>
-    
-    
-    
-    
-    
-    <!------------------------------------
-    	timeline
-    -------------------------------------->
-    
-    <section id="cd-timeline" class="cd-md-9">
-    
-    	<div class = 'age-nav'>
-    		<p>10대</p>
-    		<p>20대</p>
-    		<p>30대</p>
-    		<p>40대</p>
-    		<p>50대</p>
-    		<p>60대</p>
-    		<p>70대</p>
-    		<p>80대</p>
-    		<p>90대</p>
-    	</div>
-    
-    	<% @sg.each do |t| %>
-    		<div class="cd-timeline-block age-<%= t.due.year.to_s[2] %>">
-    			<div class="cd-timeline-img"></div>
-    			<div class="cd-timeline-content">
-    				<div class="content-header">
-    			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">
-    			                <img src="http://goo.gl/ntkbMh">
-    				</div>
-    				<div class="content-body">
-    					<div class="arrow_box">
-    					 	<h1> <%= t.title %> </h1>
-    					 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
-    					</div>
-    					
-    					<div class="doplan-list">
-    					<% t.doplans.each do |d| %>
-    						<div class="doplan-line">
+</div>
+
+
+
+
+
+<!------------------------------------
+	timeline
+-------------------------------------->
+
+<section id="cd-timeline">
+
+	<div class = 'age-nav'>
+		<p>10대</p>
+		<p>20대</p>
+		<p>30대</p>
+		<p>40대</p>
+		<p>50대</p>
+		<p>60대</p>
+		<p>70대</p>
+		<p>80대</p>
+		<p>90대</p>
+	</div>
+
+	<% @sg.each do |t| %>
+		<div class="cd-timeline-block age-<%= t.due.year.to_s[2] %>">
+			<div class="cd-timeline-img"></div>
+			<div class="cd-timeline-content">
+				<div class="content-header">
+			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">
+			                <img src="http://goo.gl/ntkbMh">
+				</div>
+				<div class="content-body">
+					<div class="arrow_box">
+					 	<h1> <%= t.title %> </h1>
+					 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
+					</div>
+					
+					<div class="doplan-list">
+					<% t.doplans.each do |d| %>
+						<div class="doplan-line">
+						    <div>
     							<%= d.content %>
     			                <input type="checkbox" checked="checked" name="option">
-    			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">
-    			                <img src="http://goo.gl/ntkbMh">
-    						</div>
-    					<% end %>
-    					</div>
-    					
-    					
-                        <div class="add-plan">
-                            <img class="add-plan-button" value="<%= t.id%>" src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB">
-                            <input type="text" placeholder="실행 계획 추가...">
-                        </div>
-    				</div>
-    			</div>
-    		</div>
-    	<% end %>
-    		
-    	</div>
-    </section>
-</div>
+    			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">
+    			                <img src="http://goo.gl/ntkbMh" class="edit_button">
+			                </div>
+		                    <div style="display: none">
+		                        <input type="text" value="<%=d.content%>">
+		                        <input type="submit" value="확인">
+		                    </div>
+						</div>
+					<% end %>
+					</div>
+					
+					
+                    <div class="add-plan">
+                        <img class="add-plan-button" value="<%= t.id%>" src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB">
+                        <input type="text" placeholder="실행 계획 추가...">
+                    </div>
+				</div>
+			</div>
+		</div>
+	<% end %>
+		
+	</div>
+</section>

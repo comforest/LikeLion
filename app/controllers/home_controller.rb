@@ -17,6 +17,12 @@ class HomeController < ApplicationController
     render :text => ""
   end
   
+  def rm_doplan
+    dp = Doplan.find(params[:gid])
+    dp.destroy
+    render :text => ""
+  end
+  
   def add_goal
     bg = BigGoal.new
     bg.content = params[:content]
