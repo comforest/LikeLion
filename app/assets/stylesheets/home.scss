@@ -472,7 +472,7 @@ write Small Goal
 
 #write-small-goal #biggoal .add_cate{
   position:relative;
-  top:60px;
+  bottom: -15px;
 }
 #write-small-goal #biggoal .add_cate div{
   display:inline-block;
@@ -553,7 +553,6 @@ write Small Goal
   margin-bottom:10px
 }
 #write-small-goal #plan-list .list-item>div{
-  height: 100%;
   margin-bottom: 9px;
 }
 #write-small-goal #plan-list .list-item>div>div+div{
