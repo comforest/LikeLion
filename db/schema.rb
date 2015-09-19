@@ -38,6 +38,7 @@ ActiveRecord::Schema.define(version: 20150919123614) do
     t.string   "title"
     t.date     "due"
     t.integer  "public_range"
+    t.boolean  "favorite"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
   end
