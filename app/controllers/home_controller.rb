@@ -15,6 +15,12 @@ class HomeController < ApplicationController
     dp.save
     
     render :text => ""
+    
+    data = {:id => dp.id}.to_json
+    return data
+    
+    
+    
   end
   
   def edit_doplan
