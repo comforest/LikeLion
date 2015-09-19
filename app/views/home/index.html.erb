@@ -8,7 +8,7 @@
 
 <div id="full" style="position: fixed;">
     
-    <a href="/home/index">
+    <a href="#">
         <img src="/assets/icon.jpg" style="height:100px; width:100%">
     </a>
     
@@ -135,7 +135,7 @@
 					<% t.doplans.each do |d| %>
 						<div class="doplan-line">
 						    <div>
-    							<div sytle='display: inline-block'><%= d.content %></div>
+    							<p style='display: inline-block'><%= d.content %></p>
     			                <input type="checkbox" checked="checked" name="option">
     			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">
     			                <img src="http://goo.gl/ntkbMh" class="edit_button">
@@ -151,7 +151,7 @@
 					
                     <div class="add-plan">
                         <img class="add-plan-button" value="<%= t.id%>" src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB">
-                        <input type="text" placeholder="실행 계획 추가...">
+                        <input style="width:80%;" type="text" placeholder="실행 계획 추가...">
                     </div>
 				</div>
 			</div>
