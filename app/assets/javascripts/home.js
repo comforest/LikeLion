@@ -16,15 +16,13 @@ jQuery(document).ready(function($) {
                         data: { content: txt, sgid: sgid},
                         url: "/home/add_doplan",
                         success: function(data){
-                            console.log(data[:id]);
                             mthis.parent().prev().append(
         						'<div class="doplan-line">' +
-<<<<<<< HEAD
+
         							'<p>' + txt + '</p>' +
         			                '<input type="checkbox" name="option">' +
         			                '<img src="/assets/delete_icon.jpg" class="del_button" value="0">' +
         			                '<img src="/assets/modify_icon.jpg" class="edit_button">' +
-=======
         						    '<div>' +
             							'<p>' + txt + '</p>' +
             			                '<input type="checkbox" checked="checked" name="option">' +
@@ -35,7 +33,6 @@ jQuery(document).ready(function($) {
         		                        '<input type="text" value="<%=d.content%>">' +
         		                        '<input class = "edit_submit" type="submit" value="확인">' +
         		                    '</div>' +
->>>>>>> b6076691afb232f499461169ffba00b4fd0cbbb7
         						'</div>'
         					);
         					mthis.next().val("")
