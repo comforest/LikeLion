@@ -47,7 +47,7 @@ class HomeController < ApplicationController
   end
   
   def click_modify
-    bg = BigGoal.find(params[:gid])
+    bg = BigGoal.find(params[:bid])
     bg.content = params[:content]
     bg.save
     render :text => ""
