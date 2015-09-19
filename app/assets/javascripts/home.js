@@ -171,7 +171,7 @@ jQuery(document).ready(function($) {
                         $('#goal_form').hide();
                         
                     }
-                });
+                });g
             
         });
         
