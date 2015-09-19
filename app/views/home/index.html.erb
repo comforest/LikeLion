@@ -56,13 +56,15 @@
                 <div style="display:inline-block;" id="goal_color"></div>
                 <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
                 <div style="display:inline-block;"><input type="checkbox" id="goal_check"></div>
-                <div style="display:inline_block;" id="modify_delete">
 
-                    <a href="/home/click_modify/<%=b.id%>"><img src="/assets/modify_icon.jpg" id="click_mod" width=14px; height=14px;/></a>
-                    <a href="/home/click_delete/<%=b.id%>"><img src="/assets/delete_icon.jpg" id="click_del" width=14px; height=14px;/></a>
-
-                </div>
+                    <img src="/assets/modify_icon.jpg" id="click_mod" width=14px; height=14px;/>
+                    <img src="/assets/delete_icon.jpg" id="click_del" width=14px; height=14px;/>
             </div>
+                
+                  <div style="display: none" value="<%= b.id%>">
+		                        <input type="text" value="<%=b.content%>">
+		                        <input class = "modify_submit" type="submit" value="확인">
+		          </div>
             <% end %>
         </div>
         
