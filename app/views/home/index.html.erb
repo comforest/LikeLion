@@ -6,25 +6,22 @@
 </head>
 
 
-<div id="full">
-    <div style="height:100%; background-color:#60A6B9">
-        <div id="wrapper">
-            <a href="/home/index">
-                <img src="/assets/icon.jpg" style="height:100px; width:100%">
-            </a>
-        </div>
-        <div id="footer">
-            <% if user_signed_in? %>
-                <%= current_user.email %>
-                <a class="btn btn-md" href="#" role="button">마이페이지</a>
-                <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
-            <% else %>
-                <br><br>
-                <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
-            <% end %>
-        </div>
-	</div>
-
+<div id="full" style="position: fixed;">
+    
+    <a href="/home/index">
+        <img src="/assets/icon.jpg" style="height:100px; width:100%">
+    </a>
+    
+    <div id="footer" style="position: fixed;">
+        <% if user_signed_in? %>
+            <%= current_user.email %>
+            <a class="btn btn-md" href="#" role="button">마이페이지</a>
+            <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
+        <% else %>
+            <br><br>
+            <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
+        <% end %>
+    </div>
 </div>
 
 <div id="sidemenu">
@@ -122,7 +119,7 @@
 					<% t.doplans.each do |d| %>
 						<div class="doplan-line">
 						    <div>
-    							<%= d.content %>
+    							<div sytle='display: inline-block'><%= d.content %></div>
     			                <input type="checkbox" checked="checked" name="option">
     			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">
     			                <img src="http://goo.gl/ntkbMh" class="edit_button">
