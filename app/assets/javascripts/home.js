@@ -147,19 +147,32 @@ jQuery(document).ready(function($) {
                    
             $(".modify_submit").click(function(){
                 var mothis = $(this);
-                var content = mothis.prev().val();
+                var bcontent = mothis.prev().val();
                 $.ajax({
-                    data: { bid: mothis.parent().attr("value"), txt: content},
+                    data: { bid: mothis.parent().attr("value"), bcontent: bcontent},
                     url: "/home/click_modify",
                     success: function(){
                         mothis.parent().prev().show();
                         mothis.parent().hide();
-                        mothis.parent().prev().find(":first-child").text(content);
+                        mothis.parent().prev().find(":first-child").text(bcontent);
                     }
                 });
             });
             
              
+             
+            $("[id=click_del]").click(function(){
+            var mothis = $(this);
+            
+                $.ajax({
+                    data: {bid: mothis.attr("value")},
+                    url: "/home/click_delete",
+                    success: function(){
+                        mothis.parent().remove();
+                    }
+                });
+            });
+       
             
             
             
