@@ -106,12 +106,24 @@ jQuery(document).ready(function($) {
          
          /*  새 페이지 목표 추가하기 */
          
+         $('#write-small-goal .add_cate a').click(function(){
+            console.log("test");
+            var txt = $('#add_docate').val();
+            console.log(txt);
+            $('#biggoal .list .list-second').append(
+			'<div class="list-item">' +
+            '<div style= "background: #0ba29b;"> </div>' +
+            '<div style="">' + txt + '</div>' +
+            '<input type="checkbox">' +
+            '</div>'
+	    	);
+         });
           
          
          
          /*  새 페이지 실행계획 추가하기 */
          
-         $('#write-small-goal .add-plan a').click(function(){
+         $('#write-small-goal .add-plan img').click(function(){
             console.log("test");
             var txt = $('#add_dolist').val();
             console.log(txt);
