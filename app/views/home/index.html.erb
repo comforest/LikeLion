@@ -38,13 +38,13 @@
         <div id="fixed_list">
             
             <div id="all">
-                <div style="display:inline-block;"><img style="width:25px;height:25px;" src="http://i0.wp.com/www.mcfloogle.com/wp-content/uploads/2015/06/rainbow-rectangle.png?resize=514%2C318"></div>
+                <div style="display:inline-block;"><img style="width:25px;height:25px;" src="/assets/allsee.jpg"></div>
                 <div style="display:inline-block;">모두보기</div>
                 <div style="display:inline-block;"><input type="checkbox" id="side_check"></div>
             </div>
             
             <div id="important">
-                <div style="display:inline-block;"><img style="width:25px; height:25px;" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Star-icon.png"></div>
+                <div style="display:inline-block;"><img style="width:25px; height:25px;" src="/assets/like.jpg"></div>
                 <div style="display:inline-block;">중요계획</div>
                 <div style="display:inline-block;"><input type="checkbox" id="side_check"></div>
             </div>
@@ -57,8 +57,8 @@
                 <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
                 <div style="display:inline-block;"><input type="checkbox" id="goal_check"></div>
                 <div style="display:inline_block;" id="modify_delete">
-                    <img src="/images/modify_icon.jpg" id="click_mod" />
-                    <img src="/images/delete_icon.jpg" id="click_del" />
+                    <img src="/assets/modify_icon.jpg" id="click_mod" />
+                    <img src="/assets/delete_icon.jpg" id="click_del" />
                 </div>
             </div>
             <% end %>
@@ -68,7 +68,7 @@
                 
                 <div id="ad_button">
                   
-                    <div style="display:inline-block;"><img style="width:25px; height:25px;" src="http://cdn2.hubspot.net/hubfs/203330/plus.png"></div>
+                    <div style="display:inline-block;"><img style="width:25px; height:25px;" src="/assets/add.jpg"></div>
                     <div style="display:inline-block;">새 목표 추가하기</div>
                     <div style="display:inline-block;"></div>
                 </div>
@@ -127,8 +127,8 @@
 			<div class="cd-timeline-img"></div>
 			<div class="cd-timeline-content">
 				<div class="content-header">
-			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">
-			                <img src="http://goo.gl/ntkbMh">
+			                <img src="/assets/delete_icon.jpg">
+			                <img src="/assets/modify_icon.jpg">
 				</div>
 				<div class="content-body">
 					<div class="arrow_box">
@@ -142,8 +142,8 @@
 						    <div>
     							<p style='display: inline-block'><%= d.content %></p>
     			                <input type="checkbox" checked="checked" name="option">
-    			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">
-    			                <img src="http://goo.gl/ntkbMh" class="edit_button">
+    			                <img src="/assets/delete_icon.jpg" class="del_button" value="<%=d.id%>">
+    			                <img src="/assets/modify_icon.jpg" class="edit_button">
 			                </div>
 		                    <div style="display: none" value="<%= d.id%>" >
 		                        <input type="text" value="<%=d.content%>">
@@ -155,7 +155,7 @@
 					
 					
                     <div class="add-plan">
-                        <img class="add-plan-button" value="<%= t.id%>" src ="https://scontent-nrt1-1.xx.fbcdn.net/hphotos-xpa1/v/t1.0-9/10620522_913890425343231_3497715089682698679_n.jpg?oh=b3704d0bd6b74af5ce5da0b9ee5c8208&oe=566F2EEB">
+                        <img class="add-plan-button" value="<%= t.id%>" src ="/assets/add.jpg">
                         <input style="width:80%;" type="text" placeholder="실행 계획 추가...">
                     </div>
 				</div>
