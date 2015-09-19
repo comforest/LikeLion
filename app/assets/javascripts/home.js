@@ -67,6 +67,40 @@ jQuery(document).ready(function($) {
             });
         });
        
+        
+        //별 관련
+        $(".star_blank").click(function(){
+           
+           $(this).hide();
+           $(this).next().show();
+           
+        });
+        $(".star_full").click(function(){
+          
+           $(this).hide();
+           $(this).prev().show();
+           
+        });
+        
+        //접기 관련
+        
+         $(".up").click(function(){
+           $(this).parent().next().hide();
+           $(this).hide();
+           $(this).next().show();
+           
+        });
+        $(".down").click(function(){
+           $(this).parent().next().show();
+           $(this).hide();
+           $(this).prev().show();
+           
+        });
+            
+        
+        
+        
+        
         /* 큰목표추가하기부분 jQuery.. 근데 왜 안먹지 ㅠ*/
         
         
@@ -84,6 +118,10 @@ jQuery(document).ready(function($) {
             
         });
         /*편집,완료 버튼 끝*/
+        
+        
+        
+        
         
         /*새목표추가하기버튼*/
         $('#ad_button').click(function(){

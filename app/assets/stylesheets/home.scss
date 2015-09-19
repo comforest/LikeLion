@@ -295,7 +295,20 @@ timeline
   padding: 0px;
   font-size:15px;
 }
+.arrow_box .star_blank, .arrow_box .star_full{
+  position: relative;
+  float: right;
+  right: 10px;
+  z-index: 100;
+  
+}
 
+.arrow_box .up, .arrow_box .down{
+  position: relative;
+  float: right;
+  right: 10px;
+  z-index: 100;
+}
 .arrow_box::after {
    right: 100%;
    top: 50%;
