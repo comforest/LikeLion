@@ -15,7 +15,7 @@ big goal list
             <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
         </div>
         <% end %>
-        </div>
+    </div>
     <div id="modify">
         <p id="modify_button">편집</p>
         <p id="modify_done">완료</p>
@@ -104,10 +104,16 @@ big goal list
 					<div class="doplan-list">
 					<% t.doplans.each do |d| %>
 						<div class="doplan-line">
-							<%= d.content %>
-			                <input type="checkbox" checked="checked" name="option">
-			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">
-			                <img src="http://goo.gl/ntkbMh">
+						    <div>
+    							<%= d.content %>
+    			                <input type="checkbox" checked="checked" name="option">
+    			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">
+    			                <img src="http://goo.gl/ntkbMh" class="edit_button">
+			                </div>
+		                    <div style="display: none">
+		                        <input type="text" value="<%=d.content%>">
+		                        <input type="submit" value="확인">
+		                    </div>
 						</div>
 					<% end %>
 					</div>

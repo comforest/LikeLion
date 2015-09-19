@@ -1,34 +1,56 @@
-        jQuery(document).ready(function($) {
+jQuery(document).ready(function($) {
+        //나이 이동하기
         $(".age-nav p").click(function(event){            
                 var txt = $(this).text()[0];
                 console.log('.age-' + txt);
                 $('html, body').animate({scrollTop : $('.age-' + txt).offset().top}, 500);
         });
         
-        
-        $(".add-plan-button").click(
-            function(){
+        // 실행계획 추가하기
+        $(".add-plan-button").click(function(){
                 var txt = $(this).next().val();
                 var mthis = $(this);
+                var sgid = mthis.attr("value");
                 if(txt != ""){
                     $.ajax({
-                        data: { content: txt, sgid: mthis.attr("value")},
+                        data: { content: txt, sgid: sgid},
                         url: "/home/add_doplan",
                         success: function(){
-                            console.log(mthis.parent().prev().attr("class"));
                             mthis.parent().prev().append(
         						'<div class="doplan-line">' +
         							txt +
         			                '<input type="checkbox" name="option">' +
-        			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png">' +
-        			                '<img src="http://goo.gl/ntkbMh">' +
+        			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
+        			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
         						'</div>'
         					);
+        					mthis.next().val("")
                             
-                            console.log(mthis.parent().prev().attr("class"));
                         }
                     });
                 }
+        });
+       
+       
+       //실행계획 삭제하기
+       
+        $(".doplan-line .del_button").click(function(){
+            var mthis = $(this);
+            
+            $.ajax({
+                data: {gid: mthis.attr("value")},
+                url: "/home/rm_doplan",
+                success: function(){
+                    mthis.parent().parent().remove();
+                }
+            });
+        });
+       
+       //실행계획 수정하기
+       
+        $(".doplan-line .edit_button").click(function(){
+            $(this).parent().hide();
+            $(this).parent().next().show();
         });
        
        
@@ -39,7 +61,6 @@
         $('#modify_done').hide();
         /*편집,완료 버튼*/
         $('#modify_button').click(function(){
-            console.log("test");
             $('#modify_done').show();
             $('#modify_button').hide();
         });
