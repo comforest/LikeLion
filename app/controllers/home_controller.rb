@@ -45,12 +45,16 @@ class HomeController < ApplicationController
   end
   
   def click_modify
+    bg = BigGoal.find(params[:gid])
+    bg.content = params[:content]
+    bg.save
+    render :text => ""
   end
   
   def click_delete
     
-    @goal = BigGoal.find(params[:id])
-    @goal.destroy
-    redirect_to "/home/index"
+    bg = BigGoal.find(params[:id])
+    bg.destroy
+    render :text => ""
   end
 end

@@ -135,6 +135,30 @@ jQuery(document).ready(function($) {
 
         });
         
+ $(".doplan-line .edit_button").click(function(){
+            $(this).parent().hide();
+            $(this).parent().next().show();
+        });
+       
+        $("[id=click_mod]").click(function(){
+            var mothis = $(this);
+            var content = mothis.prev().val();
+            $.ajax({
+                data: {id: mothis.parent().attr("value"), txt: content},
+                url: "/home/click_modify",
+                success: function(){
+                    mothis.parent().prev().show();
+                    mothis.parent().hide();
+                    mothis.parent().prev().find(":first-child").text(content);
+                }
+            });
+        });
+             
+            
+            
+            
+        });
+        
         //목표삭제
         
     
