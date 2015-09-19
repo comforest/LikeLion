@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
                 success: function(){
                     mthis.parent().prev().show();
                     mthis.parent().hide();
-                    mthis.parent().prev().find(":first-child").val(txt);
+                    mthis.parent().prev().find(":first-child").text(txt);
                 }
             });
         });
