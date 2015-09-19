@@ -60,9 +60,9 @@ jQuery(document).ready(function($) {
                 data: {gid: mthis.parent().attr("value"), txt: txt},
                 url: "/home/edit_doplan",
                 success: function(){
-                    $(this).parent().prev().show();
-                    $(this).parent().hide();
-                    mthis.parent().prev().val(txt);
+                    mthis.parent().prev().show();
+                    mthis.parent().hide();
+                    mthis.parent().prev().find(":first-child").val(txt);
                 }
             });
         });
