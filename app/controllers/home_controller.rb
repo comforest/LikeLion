@@ -5,6 +5,8 @@ class HomeController < ApplicationController
   end
   
   def writegoal
+    
+    
   end
   
   def add_doplan
