@@ -62,6 +62,7 @@
                 </div>
             </div>
             <% end %>
+        </div>d
         
             
             <div id="adthegoal">
@@ -96,7 +97,6 @@
                 
             </div>
         
-        </div>
     </div>
 </div>
 
@@ -140,7 +140,7 @@
 					<% t.doplans.each do |d| %>
 						<div class="doplan-line">
 						    <div>
-    							<p style='display: inline-block'><%= d.content %></p>
+    							<p><%= d.content %></p>
     			                <input type="checkbox" checked="checked" name="option">
     			                <img src="/assets/delete_icon.jpg" class="del_button" value="<%=d.id%>">
     			                <img src="/assets/modify_icon.jpg" class="edit_button">
