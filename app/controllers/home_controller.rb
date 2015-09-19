@@ -17,6 +17,13 @@ class HomeController < ApplicationController
     render :text => ""
   end
   
+  def edit_doplan
+    dp = Doplan.find(params[:gid])
+    dp.content = params[:txt]
+    dp.save
+    render :text => ""
+  end
+  
   def rm_doplan
     dp = Doplan.find(params[:gid])
     dp.destroy

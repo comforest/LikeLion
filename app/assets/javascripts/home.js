@@ -53,6 +53,19 @@ jQuery(document).ready(function($) {
             $(this).parent().next().show();
         });
        
+        $(".doplan-line .edit_submit").click(function(){
+            var mthis = $(this);
+            var txt = mthis.prev().val();
+            $.ajax({
+                data: {gid: mthis.parent().attr("value"), txt: txt},
+                url: "/home/edit_doplan",
+                success: function(){
+                    $(this).parent().prev().show();
+                    $(this).parent().hide();
+                    mthis.parent().prev().val(txt);
+                }
+            });
+        });
        
         /* 큰목표추가하기부분 jQuery.. 근데 왜 안먹지 ㅠ*/
         

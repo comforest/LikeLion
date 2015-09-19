@@ -2,6 +2,43 @@ body{
   top:0px;
   background: #2d9;
 }
+
+
+// 은영 누나
+
+
+    //html,body { height: 100%; margin: 0px; padding: 0px; }
+    #full {
+      height: 100%;
+      width: 6%;
+      display: inline-block;
+      float:left;
+    }
+    .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+    }
+    .footer {
+      float:bottom;
+    }
+    .btn {
+      -webkit-border-radius: 10;
+      -moz-border-radius: 10;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #000333;
+      font-size: 20px;
+      background: #b4e2f7;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: #89cffa;
+      text-decoration: none;
+    }
+
 /* -------------------------------- 
 
 write big goal
@@ -11,7 +48,7 @@ write big goal
 
 #sidemenu{
     
-    width: 230px;
+    width: 10%;
     float: left;
     z-index: 101;
     position: relative;
@@ -554,38 +591,3 @@ write Small Goal
 
 
 
-
-// 은영 누나
-
-
-      //html,body { height: 100%; margin: 0px; padding: 0px; }
-      #full {
-        height: 100%;
-        width:10%;
-        display: inline-block;
-        float:left;
-      }
-    .wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
-    }
-    .footer, .push {
-    height: 142px; /* .push must be the same height as .footer */
-    }
-    .btn {
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
-      border-radius: 10px;
-      font-size: 15px;
-      color: #000333;
-      font-size: 20px;
-      background: #b4e2f7;
-      text-decoration: none;
-    }
-    
-    .btn:hover {
-      background: #89cffa;
-      text-decoration: none;
-    }
