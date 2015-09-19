@@ -62,7 +62,7 @@ jQuery(document).ready(function($) {
                 success: function(){
                     mthis.parent().prev().show();
                     mthis.parent().hide();
-                    mthis.parent().prev().find(":first-child").val(txt);
+                    mthis.parent().prev().find(":first-child").text(txt);
                 }
             });
         });
@@ -135,11 +135,11 @@ jQuery(document).ready(function($) {
          
          /*  새 페이지 목표 추가하기 */
          
-         $('#write-small-goal .add_cate a').click(function(){
+         $('#write-small-goal .add_cate img').click(function(){
             console.log("test");
             var txt = $('#add_docate').val();
             console.log(txt);
-            $('#biggoal .list .list-second').append(
+            $('#biggoal .list .list-container').append(
 			'<div class="list-item">' +
             '<div style= "background: #0ba29b;"> </div>' +
             '<div style="">' + txt + '</div>' +
@@ -169,6 +169,15 @@ jQuery(document).ready(function($) {
          /*  새 페이지 실행계획 추가하기 끝 */
          
          
-         
+         /*색깔추가 */
+         $('select[name="colorpicker"]').simplecolorpicker();
+        $('select[name="colorpicker"]').simplecolorpicker('selectColor', '#7bd148');
+        $('select[name="colorpicker"]').simplecolorpicker('destroy');
+                
+        $('select[name="colorpicker"]').simplecolorpicker({
+          picker: true
+          }).on('change', function() {
+          $(document.body).css('background-color', $('select[name="colorpicker"]').val());
+});        
 });
 
