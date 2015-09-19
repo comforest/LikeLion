@@ -143,12 +143,16 @@
 				 	<h1> <%= t.title %> </h1>
 				 	<h2>AGE <span style="font-size:1.7em"><%= t.due.year %></span></h2>
 			 	    
-                    <img class="up" src="/assets/uparrow.jpg"; width=30px; height=30px;  hspace="10">
-                    <img style="display: none" class="down" src="assets/downarrow.jpg"; width=30px; height=30px;  hspace="10">
+                    <img style="display: none"class="up" src="/assets/uparrow.jpg"; width=30px; height=30px;  hspace="10">
+                    <img  class="down" src="assets/downarrow.jpg"; width=30px; height=30px;  hspace="10">
                     
+                    <% if (t.favorite==true) %>
+                    <img style="display: none" class="star_blank" src="/assets/star_blank.png"; width=30px; height=30px;  hspace="10">
+                    <img class="star_full" src="/assets/star_full.png"; width=30px; height=30px;  hspace="10">
+                    <% else %>
                     <img class="star_blank" src="/assets/star_blank.png"; width=30px; height=30px;  hspace="10">
                     <img style="display: none" class="star_full" src="/assets/star_full.png"; width=30px; height=30px;  hspace="10">
-                    
+                    <% end %>
                 </div>
                 
 				<div class="content-body"  style="display: none">
