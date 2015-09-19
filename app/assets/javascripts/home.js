@@ -16,9 +16,13 @@ jQuery(document).ready(function($) {
                         data: { content: txt, sgid: sgid},
                         url: "/home/add_doplan",
                         success: function(data){
-                            console.log(data[:id]);
                             mthis.parent().prev().append(
         						'<div class="doplan-line">' +
+
+        							'<p>' + txt + '</p>' +
+        			                '<input type="checkbox" name="option">' +
+        			                '<img src="/assets/delete_icon.jpg" class="del_button" value="0">' +
+        			                '<img src="/assets/modify_icon.jpg" class="edit_button">' +
         						    '<div>' +
             							'<p>' + txt + '</p>' +
             			                '<input type="checkbox" checked="checked" name="option">' +
@@ -167,7 +171,7 @@ jQuery(document).ready(function($) {
                         $('#goal_form').hide();
                         
                     }
-                });
+                });g
             
         });
         
@@ -205,8 +209,8 @@ jQuery(document).ready(function($) {
 			'<div class="doplan-line">' +
 				txt +
                 '<input type="checkbox" name="option">' +
-                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="0">' +
-                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+                '<img src="/assets/delete_icon.jpg" class="del_button" value="0">' +
+                '<img src="/assets/modify_icon.jpg" class="edit_button">' +
 			'</div>'
 	    	);
          });
