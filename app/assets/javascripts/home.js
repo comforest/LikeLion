@@ -87,15 +87,15 @@ jQuery(document).ready(function($) {
             $('#modify_done').hide();
             $('[id=goal_check]').show();
             $('[id=modify_delete]').hide();
+
         });
         
-                /*
-    <div id="modify">
-        <p id="modify_button">편집</p>
-        <p id="modify_done">완료</p>
-    </div>
-    */
+        //목표삭제
+        
     
+        
+        
+        
         /*편집,완료 버튼 끝*/
         
         /*새목표추가하기버튼*/
