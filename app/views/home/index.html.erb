@@ -10,21 +10,18 @@
     <div style="height:100%; background-color:#60A6B9">
         <div id="wrapper">
             <a href="/home/index">
-                <img src="/assets/icon.jpg" style="height:100px; width:100px">
+                <img src="/assets/icon.jpg" style="height:100px; width:100%">
             </a>
-            <div class='push'></div>
-            <div class='push'></div>
-            <div class='push'></div>
         </div>
         <div id="footer">
-        <% if user_signed_in? %>
-        <%= current_user.email %>
-        <a class="btn btn-md" href="#" role="button">마이페이지</a>
-        <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
-        <% else %>
-        <br><br>
-        <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
-        <% end %>
+            <% if user_signed_in? %>
+                <%= current_user.email %>
+                <a class="btn btn-md" href="#" role="button">마이페이지</a>
+                <a class="btn btn-md" href="/users/sign_out" role="button">로그아웃</a>
+            <% else %>
+                <br><br>
+                <a class="btn btn-sm" href="/users/sign_in" role="button">로그인</a>
+            <% end %>
         </div>
 	</div>
 
@@ -37,13 +34,6 @@
     
     <div id="list_item">
         
-        <% @bg.each do |b| %>
-        <div id="list<%= b.id %>">
-            <div style="display:inline-block;" id="goal_color"></div>
-            <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
-            <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
-        </div>
-        <% end %>
     </div>
     <div id="modify">
         <p id="modify_button">편집</p>
@@ -73,11 +63,6 @@
                 <div style="display:inline-block;"><input type="checkbox"></div>
             </div>
             <% end %>
-
-            <div id="modify">
-                <p id="modify_button">편집</p>
-                <p id="modify_done">완료</p>
-            </div>
             
             <div id="adthegoal">
                 
@@ -85,15 +70,6 @@
                     <div style="display:inline-block;"><img style="width:25px; height:25px;" src="http://cdn2.hubspot.net/hubfs/203330/plus.png"></div>
                     <div style="display:inline-block;">새 목표 추가하기</div>
                     <div style="display:inline-block;"></div>
-                </div>
-                <div id="list_item">
-                    <% @bg.each do |b| %>
-                    <div>   
-                        <div style="display:inline-block;" id="goal_color"></div>
-                        <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
-                        <div style="display:inline-block;" id="goal_check"><input type="checkbox"></div>
-                    </div>
-                    <% end %>
                 </div>
                 
                 <div id="goal_form">
@@ -153,9 +129,9 @@
     			                <img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">
     			                <img src="http://goo.gl/ntkbMh" class="edit_button">
 			                </div>
-		                    <div style="display: none">
+		                    <div style="display: none" value="<%= d.id%>" >
 		                        <input type="text" value="<%=d.content%>">
-		                        <input type="submit" value="확인">
+		                        <input class = "edit_submit" type="submit" value="확인">
 		                    </div>
 						</div>
 					<% end %>

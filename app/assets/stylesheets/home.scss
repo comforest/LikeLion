@@ -1,6 +1,44 @@
 body{
+  top:0px;
   background: #2d9;
 }
+
+
+// 은영 누나
+
+
+    //html,body { height: 100%; margin: 0px; padding: 0px; }
+    #full {
+      height: 100%;
+      width: 6%;
+      display: inline-block;
+      float:left;
+    }
+    .wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
+    }
+    .footer {
+      float:bottom;
+    }
+    .btn {
+      -webkit-border-radius: 10;
+      -moz-border-radius: 10;
+      border-radius: 10px;
+      font-size: 15px;
+      color: #000333;
+      font-size: 20px;
+      background: #b4e2f7;
+      text-decoration: none;
+    }
+    
+    .btn:hover {
+      background: #89cffa;
+      text-decoration: none;
+    }
+
 /* -------------------------------- 
 
 write big goal
@@ -10,13 +48,12 @@ write big goal
 
 #sidemenu{
     
-    width: 230px;
+    width: 10%;
     float: left;
     z-index: 101;
     position: relative;
-    left: 40px;
-    top: 30px;
     background-color: #FFFFFF;
+    display:inline-block;
 }
 
 #sidemenu #title{
@@ -398,10 +435,17 @@ write Small Goal
   display:inline-block;
   height:150px;
 }
-#write-small-goal #biggoal .list .list-item{
+
+#write-small-goal #biggoal .list .list-container{
+  height:110px;
+  width:250px;
+  overflow:auto;
+}
+
+#write-small-goal #biggoal .list .list-container .list-item{
   height:30px;
 }
-#write-small-goal #biggoal .list .list-item div:nth-child(1){
+#write-small-goal #biggoal .list .list-container .list-item div:nth-child(1){
   display:inline-block;
   width:23px;
   height:23px;
@@ -409,11 +453,11 @@ write Small Goal
   top:7px;
   margin-right:5px;
 }
-#write-small-goal #biggoal .list .list-item div:nth-child(2){
+#write-small-goal #biggoal .list .list-container .list-item div:nth-child(2){
   display:inline-block;
   width:150px;
 }
-#write-small-goal #biggoal .list .list-item input{
+#write-small-goal #biggoal .list .list-container .list-item input{
   width:18px;
   height:18px;
   position:relative;
@@ -499,6 +543,9 @@ write Small Goal
 #write-small-goal #plan-list>.list-item{
   margin: 0 5%;
   opacity:0.6;
+  height:145px;
+  overflow:auto;
+  margin-bottom:10px
 }
 #write-small-goal #plan-list .list-item>div{
   height: 100%;
@@ -554,37 +601,3 @@ write Small Goal
 
 
 
-
-// 은영 누나
-
-
-      //html,body { height: 100%; margin: 0px; padding: 0px; }
-      #full {
-        height: 100%;
-        width:10%;
-        display: inline-block;
-      }
-    .wrapper {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -142px; /* the bottom margin is the negative value of the footer's height */
-    }
-    .footer, .push {
-    height: 142px; /* .push must be the same height as .footer */
-    }
-    .btn {
-      -webkit-border-radius: 10;
-      -moz-border-radius: 10;
-      border-radius: 10px;
-      font-size: 15px;
-      color: #000333;
-      font-size: 20px;
-      background: #b4e2f7;
-      text-decoration: none;
-    }
-    
-    .btn:hover {
-      background: #89cffa;
-      text-decoration: none;
-    }
