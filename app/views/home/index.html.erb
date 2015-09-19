@@ -40,24 +40,29 @@
             <div id="all">
                 <div style="display:inline-block;"><img style="width:25px;height:25px;" src="http://i0.wp.com/www.mcfloogle.com/wp-content/uploads/2015/06/rainbow-rectangle.png?resize=514%2C318"></div>
                 <div style="display:inline-block;">모두보기</div>
-                <div style="display:inline-block;"><input type="checkbox"></div>
+                <div style="display:inline-block;"><input type="checkbox" id="side_check"></div>
             </div>
             
             <div id="important">
                 <div style="display:inline-block;"><img style="width:25px; height:25px;" src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Star-icon.png"></div>
                 <div style="display:inline-block;">중요계획</div>
-                <div style="display:inline-block;"><input type="checkbox"></div>
+                <div style="display:inline-block;"><input type="checkbox" id="side_check"></div>
             </div>
         </div>
 
         <div id="list_item">
             <% @bg.each do |b| %>
             <div>   
-                <div style="display:inline-block;" id="new_goal_color"></div>
-                <div style="display:inline-block;"><%= b.content %></div>
-                <div style="display:inline-block;"><input type="checkbox"></div>
+                <div style="display:inline-block;" id="goal_color"></div>
+                <div style="display:inline-block;" id="goal_name"><%= b.content %></div>
+                <div style="display:inline-block;"><input type="checkbox" id="goal_check"></div>
+                <div style="display:inline_block;" id="modify_delete">
+                    <img src="/images/modify_icon.jpg" id="click_mod" />
+                    <img src="/images/delete_icon.jpg" id="click_del" />
+                </div>
             </div>
             <% end %>
+        
             
             <div id="adthegoal">
                 
@@ -69,7 +74,22 @@
                 </div>
                 
                 <div id="goal_form">
-                    <div id="color_choice"></div>
+                    <div id="color_choice">
+                        <select name="colorpicker">
+                          <option value="#7bd148">Green</option>
+                          <option value="#5484ed">Bold blue</option>
+                          <option value="#a4bdfc">Blue</option>
+                          <option value="#46d6db">Turquoise</option>
+                          <option value="#7ae7bf">Light green</option>
+                          <option value="#51b749">Bold green</option>
+                          <option value="#fbd75b">Yellow</option>
+                          <option value="#ffb878">Orange</option>
+                          <option value="#ff887c">Red</option>
+                          <option value="#dc2127">Bold red</option>
+                          <option value="#dbadff">Purple</option>
+                          <option value="#e1e1e1">Gray</option>
+                        </select>
+                    </div>
                     <input type="text" id="new_goal_name">
                     <input type="button" id="plusbutton" value="+">
                 </div>

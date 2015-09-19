@@ -72,17 +72,30 @@ jQuery(document).ready(function($) {
         
         $('#goal_form').hide();
         $('#modify_done').hide();
+        $('[id=modify_delete]').hide();
         /*편집,완료 버튼*/
         $('#modify_button').click(function(){
             $('#modify_done').show();
             $('#modify_button').hide();
+            $('[id=goal_check]').hide();
+            $('[id=side_check]').hide();
+            $('[id=modify_delete]').show();
         });
         
         $('#modify_done').click(function(){
             $('#modify_button').show();
             $('#modify_done').hide();
-            
+            $('[id=goal_check]').show();
+            $('[id=modify_delete]').hide();
         });
+        
+                /*
+    <div id="modify">
+        <p id="modify_button">편집</p>
+        <p id="modify_done">완료</p>
+    </div>
+    */
+    
         /*편집,완료 버튼 끝*/
         
         /*새목표추가하기버튼*/
@@ -114,6 +127,9 @@ jQuery(document).ready(function($) {
         });
         
          /* 큰목표추가하기 jQuery 끝*/
+         
+
+ 
          
          
          
