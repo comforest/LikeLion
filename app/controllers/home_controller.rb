@@ -37,4 +37,14 @@ class HomeController < ApplicationController
     
     render :text => ""
   end
+  
+  def click_modify
+  end
+  
+  def click_delete
+    
+    @goal = BigGoal.find(params[:id])
+    @goal.destroy
+    redirect_to "/home/index"
+  end
 end
