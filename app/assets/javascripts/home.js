@@ -16,19 +16,19 @@ jQuery(document).ready(function($) {
                         data: { content: txt, sgid: sgid},
                         url: "/home/add_doplan",
                         success: function(data){
+                            
+                            $.each(data, function(key, value) {
+            alert(key + ", " + $.param(value));
+        });
+                            
                             mthis.parent().prev().append(
         						'<div class="doplan-line">' +
 
         							'<p>' + txt + '</p>' +
-        			                '<input type="checkbox" name="option">' +
-        			                '<img src="/assets/delete_icon.jpg" class="del_button" value="0">' +
-        			                '<img src="/assets/modify_icon.jpg" class="edit_button">' +
-        						    '<div>' +
-            							'<p>' + txt + '</p>' +
-            			                '<input type="checkbox" checked="checked" name="option">' +
-            			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="<%=d.id%>">' +
-            			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
-        			                '</div>' +
+        			                '<input type="checkbox" checked="checked" name="option">' +
+        			                '<img src="https://cdn4.iconfinder.com/data/icons/geomicons/32/672366-x-128.png" class="del_button" value="' + data + '">' +
+        			                '<img src="http://goo.gl/ntkbMh" class="edit_button">' +
+    			                '</div>' +
         		                    '<div style="display: none" value="<%= d.id%>" >' +
         		                        '<input type="text" value="<%=d.content%>">' +
         		                        '<input class = "edit_submit" type="submit" value="확인">' +
@@ -79,6 +79,15 @@ jQuery(document).ready(function($) {
         });
        
         
+        //실행 계획 체크
+        
+        $(".checkbox").click(function(){
+            var mthis = $(this);
+            $.ajax({
+                data: {gid: mthis.parent().attr("value"), check: mthis.attr("checked")},
+                url: "/home/checking",
+            });
+        });
         //별 관련
         $(".star_blank").click(function(){
            

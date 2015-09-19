@@ -8,6 +8,7 @@ Rails.application.routes.draw do
   get 'home/add_doplan'
   get 'home/edit_doplan'
   get 'home/rm_doplan'
+  get 'home/checking'
   get ":controller(/:action(/:id))"
   post ":controller(/:action(/:id))"
   

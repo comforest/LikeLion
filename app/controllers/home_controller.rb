@@ -16,11 +16,6 @@ class HomeController < ApplicationController
     
     render :text => ""
     
-    data = {:id => dp.id}.to_json
-    return data
-    
-    
-    
   end
   
   def edit_doplan
@@ -33,6 +28,14 @@ class HomeController < ApplicationController
   def rm_doplan
     dp = Doplan.find(params[:gid])
     dp.destroy
+    render :text => ""
+  end
+  
+  
+  def checking
+    dp = Doplan.find(params[:gid])
+    dp.check = params[:checked]
+    dp.save
     render :text => ""
   end
   
